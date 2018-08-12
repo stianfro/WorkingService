@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  workingapp:
+    image: ${DOCKER_REGISTRY}workingapp
+    build:
+      context: .
+      dockerfile: WorkingApp/Dockerfile
