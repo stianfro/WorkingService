@@ -1,20 +1,19 @@
 FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
 WORKDIR /app
-EXPOSE 61530
-EXPOSE 44512
+EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY WorkingApp/WorkingApp.csproj WorkingApp/
-RUN dotnet restore WorkingApp/WorkingApp.csproj
+COPY WebApplication4/WebApplication4.csproj WebApplication4/
+RUN dotnet restore WebApplication4/WebApplication4.csproj
 COPY . .
-WORKDIR /src/WorkingApp
-RUN dotnet build WorkingApp.csproj -c Release -o /app
+WORKDIR /src/WebApplication4
+RUN dotnet build WebApplication4.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish WorkingApp.csproj -c Release -o /app
+RUN dotnet publish WebApplication4.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WorkingApp.dll"]
+ENTRYPOINT ["dotnet", "WebApplication4.dll"]
