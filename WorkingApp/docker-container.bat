@@ -1,3 +1,2 @@
-docker build -t workingservice .
-docker tag workingservice sharparchitect/workingservices:latest
-docker push sharparchitect/workingservices:latest
+docker tag workingapp:latest sharparchitect/workingapp:latest
+docker push sharparchitect/workingapp:latest

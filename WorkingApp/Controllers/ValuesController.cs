@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using WorkingLibrary;
 
 namespace WorkingApp.Controllers
 {
@@ -11,6 +12,8 @@ namespace WorkingApp.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            new LibraryClass("From Web Service App").Run();
+
             return new string[] { "value1", "value2" };
         }
 
