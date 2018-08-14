@@ -6,7 +6,7 @@
     <ProjectGuid>d305f1bb-5a54-4619-83bd-cada3d08c6aa</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
-    <DockerServiceName>webapplication4</DockerServiceName>
+    <DockerServiceName>workingapp</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
