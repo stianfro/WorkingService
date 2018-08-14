@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  webapplication4:
-    image: ${DOCKER_REGISTRY}webapplication4
+  workingapp:
+    image: ${DOCKER_REGISTRY}workingapp
     build:
       context: .
       dockerfile: WorkingApp/Dockerfile
