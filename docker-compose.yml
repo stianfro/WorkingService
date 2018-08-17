@@ -6,3 +6,9 @@ services:
     build:
       context: .
       dockerfile: WorkingApp/Dockerfile
+
+  documentapp:
+    image: ${DOCKER_REGISTRY}workingconsole
+    build:
+      context: .
+      dockerfile: WorkingConsole/Dockerfile
