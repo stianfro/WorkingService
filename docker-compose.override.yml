@@ -6,4 +6,4 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8081
     ports:
-      - "8081:8081"
+      - "8081"
